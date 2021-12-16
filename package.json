@@ -1,0 +1,24 @@
+{
+  "name": "app-clima",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Theos48/app-clima.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Theos48/app-clima/issues"
+  },
+  "homepage": "https://github.com/Theos48/app-clima#readme",
+  "dependencies": {
+    "color": "^4.1.0",
+    "inquirer": "^8.2.0"
+  }
+}
