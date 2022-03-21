@@ -1,5 +1,6 @@
 const fs = require('fs');
 const axios = require('axios');
+const { join } = require('path');
 
 class Busquedas {
 
@@ -10,6 +11,14 @@ class Busquedas {
     constructor() {
         //TODO leer DB si existe
         this.leerDB();
+    }
+
+    get historialCapitalizado() {
+        return this.historial.map( lugar => {
+            let palabras = lugar.split(" ");            
+            palabras = palabras.map( p => p[0].toUpperCase() + p.substring(1));
+            return palabras.join(' ');
+        })
     }
 
     get paramsMapbox() {
@@ -103,8 +112,7 @@ class Busquedas {
             }
         } catch( e ) {
             return false;
-        }
-        
+        }        
     }
 }   
 
